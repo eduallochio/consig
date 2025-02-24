@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Home, LogOut, Package, PanelBottom, Settings2, ShoppingBag, User } from "lucide-react";
+import { Fingerprint, FolderUp, Home, LogOut, Package, PanelBottom, Settings2, Store, User, UserRoundSearch, Users2 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 
 export function Sidebar() {
@@ -16,7 +16,7 @@ export function Sidebar() {
 							href="#"
 							className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full"
 						>
-							<Package className="h-4 w-4" />
+							<Fingerprint className="h-4 w-4" />
 							<span className="sr-only">Dashboard Avatar</span>
 						</Link>
 
@@ -39,11 +39,11 @@ export function Sidebar() {
 									href="#"
 									className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground transition-colors"
 								>
-									<ShoppingBag className="h-5 w-5" />
-									<span className="sr-only">Pedidos</span>
+									<FolderUp className="h-5 w-5" />
+									<span className="sr-only">Importação</span>
 								</Link>
 							</TooltipTrigger>
-							<TooltipContent side="right">Pedidos</TooltipContent>
+							<TooltipContent side="right">Importação</TooltipContent>
 						</Tooltip>
 
 						<Tooltip>
@@ -52,11 +52,11 @@ export function Sidebar() {
 									href="#"
 									className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground transition-colors"
 								>
-									<Package className="h-5 w-5" />
-									<span className="sr-only">Produto</span>
+									<Store className="h-5 w-5" />
+									<span className="sr-only">Lojas</span>
 								</Link>
 							</TooltipTrigger>
-							<TooltipContent side="right">Produto</TooltipContent>
+							<TooltipContent side="right">Lojas</TooltipContent>
 						</Tooltip>
 						<Tooltip>
 							<TooltipTrigger asChild>
@@ -76,6 +76,30 @@ export function Sidebar() {
 									href="#"
 									className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground transition-colors"
 								>
+									<Users2 className="h-5 w-5" />
+									<span className="sr-only">Vendedores</span>
+								</Link>
+							</TooltipTrigger>
+							<TooltipContent side="right">Vendedores</TooltipContent>
+						</Tooltip>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<Link
+									href="#"
+									className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+								>
+									<UserRoundSearch className="h-5 w-5" />
+									<span className="sr-only">Supervisores</span>
+								</Link>
+							</TooltipTrigger>
+							<TooltipContent side="right">Supervisores</TooltipContent>
+						</Tooltip>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<Link
+									href="#"
+									className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+								>
 									<Settings2 className="h-5 w-5" />
 									<span className="sr-only">Configurações</span>
 								</Link>
@@ -85,6 +109,7 @@ export function Sidebar() {
 					</TooltipProvider>
 				</nav>
 
+				{/* mobile */}
 				<nav className="mt-auto flex flex-col items-center gap-4 px-2 py-5">
 					<TooltipProvider>
 						<Tooltip>
@@ -131,8 +156,8 @@ export function Sidebar() {
 								<Link
 									href="#"
 									className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground" >
-									<ShoppingBag className="h-5 w-5 transition-all" />
-									Pedidos
+									<FolderUp className="h-5 w-5 transition-all" />
+									Importes
 								</Link>
 								<Link
 									href="#"
@@ -156,7 +181,7 @@ export function Sidebar() {
 							</nav>
 						</SheetContent>
 					</Sheet>
-					<h2>Menu</h2>
+
 				</header>
 			</div>
 		</div>
